@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>H.N கேட்டரிங் | கும்பகோணம்</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Tamil:wght@500;800&family=Mukta+Malar:wght@400;600&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--g0:#06180f;--g1:#0c2a1a;--g2:#134026;--gold:#f2c14e;--gold2:#c8921f;--maroon:#7a1426;--cream:#f7ecd2;--ink:#e9e2cc}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px;background:var(--g0)}
+body{margin:0;background:var(--g0) url(images/pattern-leaf.png) center/cover fixed;color:var(--ink);font-family:'Mukta Malar',sans-serif;font-size:17px;line-height:1.75;overflow-x:hidden;padding-bottom:env(safe-area-inset-bottom,0px)}
+h1,h2,h3{font-family:'Noto Serif Tamil',serif;margin:0;line-height:1.3;color:var(--cream)}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1140px;margin:auto;padding:0 22px}
+section{padding:90px 0;position:relative}
+h2{font-size:clamp(26px,4.4vw,42px);font-weight:800;text-align:center}
+.sub{text-align:center;max-width:560px;margin:10px auto 48px;color:#b9c4b0}
+.orn{display:block;margin:14px auto 0;width:150px;height:14px}
+/* image frame: gradient shows if image missing */
+.ph{background:linear-gradient(135deg,var(--g2),var(--maroon));overflow:hidden;position:relative}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding-top:env(safe-area-inset-top,0px);transition:background .4s}
+nav.s{background:rgba(6,24,15,.93);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(242,193,78,.25)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:'Cormorant Garamond',serif;font-weight:700;font-size:27px;color:var(--gold);letter-spacing:1px}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-weight:600}
+nav ul a:hover{color:var(--gold)}
+.call{background:var(--gold);color:#2a1a00;padding:6px 18px;border-radius:30px;font-weight:600}
+@media(max-width:820px){nav ul{display:none}}
+
+/* hero */
+.hero{height:100vh;min-height:620px;padding:0;display:flex;align-items:center;overflow:hidden}
+.hero .bg{position:absolute;inset:-8% 0;will-change:transform}
+.hero .bg img{animation:kb 22s ease-in-out infinite alternate}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(6,24,15,.92) 0,rgba(6,24,15,.6) 55%,rgba(6,24,15,.15)),linear-gradient(0deg,var(--g0),transparent 30%)}
+.hero .wrap{position:relative;z-index:2}
+.hero .in{max-width:620px}
+.tag{color:var(--gold);opacity:0;animation:up 1s .2s forwards}
+.hero h1{font-size:clamp(80px,16vw,170px);font-weight:800;line-height:1;letter-spacing:4px;
+background:linear-gradient(100deg,#8a5a08 10%,#ffe9a0 30%,#f2c14e 45%,#b57a10 60%,#ffe9a0 80%,#8a5a08);background-size:250% 100%;
+-webkit-background-clip:text;background-clip:text;color:transparent;opacity:0;animation:up 1.2s .5s forwards,shine 6s 1.8s linear infinite}
+.hero h1 small{display:block;font-size:.4em;letter-spacing:2px}
+.motto{margin:18px 0 30px;color:var(--cream);font-size:20px;opacity:0;animation:up 1s 1.1s forwards}
+.btns{display:flex;gap:14px;flex-wrap:wrap;opacity:0;animation:up 1s 1.4s forwards}
+.btn{padding:13px 32px;border-radius:40px;border:1.5px solid var(--gold);transition:transform .25s,background .25s,color .25s;cursor:pointer;font:inherit;font-weight:600;color:var(--cream);background:transparent}
+.btn.fill{background:var(--gold);color:#2a1a00}
+.btn:hover{transform:translateY(-3px);background:var(--gold);color:#2a1a00}
+.steam{position:absolute;inset:auto 0 0 0;height:60%;z-index:1;pointer-events:none}
+.steam i{position:absolute;bottom:-30px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(247,236,210,.18),transparent 70%);animation:rise 9s linear infinite}
+@keyframes kb{to{transform:scale(1.12) translateX(-2%)}}
+@keyframes up{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes shine{to{background-position:-250% 0}}
+@keyframes rise{0%{transform:translateY(0) scale(.6);opacity:0}20%{opacity:1}100%{transform:translateY(-55vh) scale(2.4);opacity:0}}
+
+.marq{background:var(--maroon);border-block:1px solid var(--gold2);overflow:hidden;white-space:nowrap;padding:12px 0}
+.marq div{display:inline-block;animation:slide 30s linear infinite;color:var(--cream);font-family:'Noto Serif Tamil',serif}
+.marq span{margin:0 26px}.marq b{color:var(--gold);font-weight:500}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about h2{text-align:left}
+.about p{margin:0 0 16px}
+.portrait{aspect-ratio:10/13;border:1px solid var(--gold2);padding:10px;background:rgba(0,0,0,.3);position:relative}
+.portrait .ph{height:100%}
+.portrait figcaption{position:absolute;left:-14px;bottom:30px;background:var(--maroon);border:1px solid var(--gold);padding:12px 22px;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.portrait figcaption b{display:block;font-family:'Noto Serif Tamil',serif;color:var(--gold);font-size:22px}
+@media(max-width:820px){.about{grid-template-columns:1fr}.portrait{max-width:380px;margin:auto}}
+
+/* menu cards */
+.mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
+.mcard{background:rgba(6,24,15,.8);border:1px solid rgba(242,193,78,.3);transition:transform .4s,border-color .4s}
+.mcard .ph{aspect-ratio:1}
+.mcard img{transition:transform .8s}
+.mcard:hover{transform:translateY(-8px);border-color:var(--gold)}
+.mcard:hover img{transform:scale(1.1)}
+.mcard div.t{padding:18px 20px 22px}
+.mcard h3{font-size:20px;margin-bottom:4px}
+.mcard p{margin:0;color:#b9c4b0;font-size:15.5px}
+
+/* services image cards */
+.sgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.scard{aspect-ratio:3/4}
+.scard img{transition:transform 1s}
+.scard:hover img{transform:scale(1.08)}
+.scard::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,24,15,.95) 5%,transparent 60%)}
+.scard div{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.scard h3{font-size:22px;color:var(--gold)}
+.scard p{margin:4px 0 0;font-size:15.5px}
+@media(max-width:820px){.sgrid{grid-template-columns:1fr}.scard{aspect-ratio:4/3}}
+
+/* parallax band */
+.band{height:70vh;min-height:420px;padding:0;display:grid;place-items:center;text-align:center;overflow:hidden}
+.band .bg{position:absolute;inset:-15% 0}
+.band::before{content:"";position:absolute;inset:0;z-index:1;background:rgba(6,24,15,.68)}
+.band .q{position:relative;z-index:2;padding:0 22px;max-width:760px}
+.band h2{font-size:clamp(28px,5vw,52px)}
+.band p{color:var(--gold);margin:12px 0 0;font-size:19px}
+
+.stats{display:flex;justify-content:center;gap:clamp(30px,8vw,110px);flex-wrap:wrap;text-align:center}
+.stats b{display:block;font-family:'Cormorant Garamond',serif;font-size:62px;color:var(--gold);line-height:1}
+.stats span{color:#b9c4b0}
+
+/* gallery */
+.gal{columns:3 260px;column-gap:16px}
+.gal .ph{margin-bottom:16px;break-inside:avoid;cursor:zoom-in;min-height:160px}
+.gal img{height:auto;transition:transform .8s,filter .5s}
+.gal .ph:hover img{transform:scale(1.07);filter:brightness(1.1)}
+.lb{position:fixed;inset:0;z-index:50;background:rgba(0,0,0,.92);display:none;place-items:center;padding:20px;cursor:zoom-out}
+.lb.on{display:grid}
+.lb img{max-width:100%;max-height:90vh;width:auto;height:auto;border:2px solid var(--gold2)}
+
+/* reviews */
+.rev{max-width:720px;margin:auto;text-align:center;min-height:200px;position:relative}
+.rev blockquote{margin:0;position:absolute;inset:0;opacity:0;transition:opacity .8s;font-family:'Noto Serif Tamil',serif;font-size:20px;line-height:1.8;color:var(--cream)}
+.rev blockquote.on{opacity:1;position:relative}
+.rev cite{display:block;margin-top:16px;font-style:normal;color:var(--gold);font-family:'Mukta Malar'}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:24px}
+.dots button{width:11px;height:11px;border-radius:50%;border:1px solid var(--gold);background:none;padding:0;cursor:pointer}
+.dots button.on{background:var(--gold)}
+
+/* contact */
+.contact{overflow:hidden}
+.contact .bg{position:absolute;inset:0;opacity:.3}
+.contact::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,var(--g0),rgba(6,24,15,.55) 40%,var(--g0))}
+.contact .wrap{position:relative;z-index:2}
+.cwrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.info p{margin:0 0 22px}
+.info small{display:block;color:var(--gold);font-size:15px}
+.info a{font-size:28px;font-family:'Cormorant Garamond',serif;font-weight:700;color:var(--cream)}
+.info a:hover{color:var(--gold)}
+.enq{border:1px solid var(--gold2);padding:30px;background:rgba(0,0,0,.45);backdrop-filter:blur(6px)}
+.enq h3{margin-bottom:16px;font-size:21px}
+.enq label{display:block;font-size:15px;margin-bottom:12px;color:#b9c4b0}
+.enq input,.enq select{width:100%;margin-top:4px;padding:11px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(242,193,78,.35);color:var(--cream);font:inherit;border-radius:3px}
+.enq input:focus,.enq select:focus,.btn:focus-visible,a:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.enq select option{color:#000}
+.enq .btn{width:100%;margin-top:6px}
+@media(max-width:820px){.cwrap{grid-template-columns:1fr}}
+footer{text-align:center;padding:26px 22px 90px;border-top:1px solid rgba(242,193,78,.25);color:#8e9a86;font-size:15px;background:var(--g0)}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;padding-bottom:env(safe-area-inset-bottom,0px);background:var(--g0);border-top:1px solid var(--gold2)}
+.bar a{flex:1;text-align:center;padding:13px 6px;font-weight:600}
+.bar a:first-child{background:var(--gold);color:#2a1a00}
+.bar a:last-child{background:#1a9c4b;color:#fff}
+@media(min-width:821px){.bar{left:auto;right:20px;bottom:20px;border:0;background:none;gap:10px;padding:0}.bar a{border-radius:40px;padding:13px 26px;box-shadow:0 8px 24px rgba(0,0,0,.5)}}
+
+.rv{opacity:0;transform:translateY(28px);transition:opacity .9s,transform .9s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.tag,.hero h1,.motto,.btns{opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+<a href="#top" class="logo">H.N CATERING</a>
+<ul><li><a href="#about">எங்களை பற்றி</a></li><li><a href="#menu">மெனு</a></li><li><a href="#services">சேவைகள்</a></li><li><a href="#gallery">கேலரி</a></li><li><a href="#contact">தொடர்புக்கு</a></li></ul>
+<a class="call" href="tel:+919003600516">அழைக்க</a>
+</div></nav>
+
+<header class="hero ph" id="top">
+<div class="bg" data-p=".25"><img src="images/hero-biryani.jpg" alt="H.N கேட்டரிங் சிக்கன் பிரியாணி" onerror="this.remove()"></div>
+<div class="steam"><i style="left:55%"></i><i style="left:68%;animation-delay:3s"></i><i style="left:80%;animation-delay:6s"></i></div>
+<div class="wrap"><div class="in">
+<p class="tag">பாரம்பரிய உணவு • பாரம்பரிய சுவை</p>
+<h1>H.N<small>கேட்டரிங்</small></h1>
+<p class="motto">சுவையான உணவு • நினைவில் நிற்கும் நிகழ்வுகள்</p>
+<div class="btns"><a class="btn fill" href="#contact">ஆர்டர் செய்ய</a><a class="btn" href="#menu">மெனு பார்க்க</a></div>
+</div></div>
+</header>
+
+<div class="marq"><div>
+<span>பிரியாணி</span><b>✦</b><span>சிக்கன் ஃப்ரை</span><b>✦</b><span>திருமண விருந்து</span><b>✦</b><span>விழா சமையல்</span><b>✦</b><span>வாழை இலை சாப்பாடு</span><b>✦</b><span>பிரியாணி</span><b>✦</b><span>சிக்கன் ஃப்ரை</span><b>✦</b><span>திருமண விருந்து</span><b>✦</b><span>விழா சமையல்</span><b>✦</b><span>வாழை இலை சாப்பாடு</span><b>✦</b>
+</div></div>
+
+<section id="about"><div class="wrap about">
+<div class="rv">
+<h2>சுவையான உணவு,<br>நம் பெருமை</h2>
+<svg class="orn" style="margin-left:0" viewBox="0 0 150 14"><path d="M0 7H55M95 7H150" stroke="#f2c14e"/><path d="M75 1l6 6-6 6-6-6z" fill="#f2c14e"/></svg>
+<p style="margin-top:22px">கும்பகோணத்தின் பாரம்பரிய சுவையை உங்கள் வீட்டு விழாக்களுக்கு கொண்டு வருகிறோம். திருமணம், வரவேற்பு, காதணி விழா, பிறந்தநாள் என எந்த நிகழ்வாக இருந்தாலும் சுத்தமான முறையில், சரியான நேரத்தில், மனம் நிறைந்த சுவையுடன் பரிமாறுகிறோம்.</p>
+<p>தலைமை சமையல்காரர் நிஜாம் அவர்களின் கைப்பக்குவமே எங்கள் அடையாளம்.</p>
+</div>
+<figure class="portrait rv" style="margin:0"><div class="ph"><img src="images/chef-nizam.jpg" alt="தலைமை சமையல்காரர் H. நிஜாம்" loading="lazy" onerror="this.remove()"></div>
+<figcaption>தலைமை சமையல்காரர்<b>H. நிஜாம்</b></figcaption></figure>
+</div></section>
+
+<section id="menu" style="background:linear-gradient(180deg,transparent,rgba(6,24,15,.85) 15%,rgba(6,24,15,.85) 85%,transparent)"><div class="wrap">
+<h2 class="rv">எங்கள் சிறப்பு உணவுகள்</h2>
+<svg class="orn" viewBox="0 0 150 14"><path d="M0 7H55M95 7H150" stroke="#f2c14e"/><path d="M75 1l6 6-6 6-6-6z" fill="#f2c14e"/></svg>
+<p class="sub">வாழை இலையில், சூடாக, பாரம்பரிய முறையில்.</p>
+<div class="mgrid">
+<article class="mcard rv"><div class="ph"><img src="images/biryani-closeup.jpg" alt="சிக்கன் பிரியாணி" loading="lazy" onerror="this.remove()"></div><div class="t"><h3>சிக்கன் பிரியாணி</h3><p>சீரக சம்பா அரிசி, மசாலா மணம்.</p></div></article>
+<article class="mcard rv"><div class="ph"><img src="images/chicken-fry.jpg" alt="சிக்கன் ஃப்ரை" loading="lazy" onerror="this.remove()"></div><div class="t"><h3>சிக்கன் ஃப்ரை</h3><p>மொறுமொறுப்பு, காரசாரம்.</p></div></article>
+<article class="mcard rv"><div class="ph"><img src="images/egg-masala.jpg" alt="முட்டை மசாலா" loading="lazy" onerror="this.remove()"></div><div class="t"><h3>முட்டை மசாலா</h3><p>சிவப்பு மசாலாவில் ஊறிய முட்டை.</p></div></article>
+<article class="mcard rv"><div class="ph"><img src="images/sides-raita.jpg" alt="ரைத்தா மற்றும் கிரேவி" loading="lazy" onerror="this.remove()"></div><div class="t"><h3>ரைத்தா & கிரேவி</h3><p>வெங்காய ரைத்தா, தொக்கு, கத்தரிக்காய் கிரேவி.</p></div></article>
+</div></div></section>
+
+<section class="band ph"><div class="bg" data-p=".3"><img src="images/kitchen-cooking.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+<div class="q rv"><h2>விறகு அடுப்பு, செம்பு பாத்திரம், கைப்பக்குவம்</h2><p>அதுதான் எங்கள் சுவையின் ரகசியம்</p></div></section>
+
+<section id="services"><div class="wrap">
+<h2 class="rv">எங்கள் சேவைகள்</h2>
+<svg class="orn" viewBox="0 0 150 14"><path d="M0 7H55M95 7H150" stroke="#f2c14e"/><path d="M75 1l6 6-6 6-6-6z" fill="#f2c14e"/></svg>
+<p class="sub">எந்த நிகழ்வாக இருந்தாலும், உங்கள் விருந்தினர் எண்ணிக்கைக்கு ஏற்ப சமைத்து வழங்குகிறோம்.</p>
+<div class="sgrid">
+<div class="scard ph rv"><img src="images/wedding-feast.jpg" alt="திருமண விருந்து" loading="lazy" onerror="this.remove()"><div><h3>திருமண விருந்து</h3><p>காலை டிபன் முதல் இரவு விருந்து வரை.</p></div></div>
+<div class="scard ph rv"><img src="images/banana-leaf-meal.jpg" alt="வாழை இலை சாப்பாடு" loading="lazy" onerror="this.remove()"><div><h3>வாழை இலை சாப்பாடு</h3><p>வீட்டு விழாக்களுக்கு முழு சாப்பாடு.</p></div></div>
+<div class="scard ph rv"><img src="images/catering-setup.jpg" alt="கேட்டரிங் ஏற்பாடு" loading="lazy" onerror="this.remove()"><div><h3>பஃபே & பெரிய நிகழ்வுகள்</h3><p>அலுவலகம், வரவேற்பு, குழு உணவு.</p></div></div>
+</div></div></section>
+
+<section style="padding:56px 0;background:var(--g1)"><div class="wrap stats rv">
+<div><b data-n="500">0</b><span>+ நிகழ்வுகள்</span></div>
+<div><b data-n="10">0</b><span>+ ஆண்டு அனுபவம்</span></div>
+<div><b data-n="100">0</b><span>% சுத்தமான சமையல்</span></div>
+</div></section>
+
+<section id="gallery"><div class="wrap">
+<h2 class="rv">கேலரி</h2>
+<svg class="orn" viewBox="0 0 150 14"><path d="M0 7H55M95 7H150" stroke="#f2c14e"/><path d="M75 1l6 6-6 6-6-6z" fill="#f2c14e"/></svg>
+<p class="sub">எங்கள் சமையல், எங்கள் விருந்து.</p>
+<div class="gal" id="gal"></div>
+</div></section>
+
+<section><div class="wrap">
+<h2 class="rv">வாடிக்கையாளர் கருத்துகள்</h2>
+<svg class="orn" viewBox="0 0 150 14" style="margin-bottom:40px"><path d="M0 7H55M95 7H150" stroke="#f2c14e"/><path d="M75 1l6 6-6 6-6-6z" fill="#f2c14e"/></svg>
+<!-- TODO: real customer reviews-ஆ மாத்துங்க -->
+<div class="rev" id="rev">
+<blockquote class="on">“பிரியாணி சுவை அருமை. எல்லா விருந்தினர்களும் பாராட்டினார்கள்.”<cite>— வாடிக்கையாளர், கும்பகோணம்</cite></blockquote>
+<blockquote>“சொன்ன நேரத்திற்கு சூடாக உணவு வந்தது. சுத்தமாகவும் இருந்தது.”<cite>— வாடிக்கையாளர், திருமண விழா</cite></blockquote>
+<blockquote>“வாழை இலை விருந்து பாரம்பரிய சுவையில் இருந்தது.”<cite>— வாடிக்கையாளர், வீட்டு விழா</cite></blockquote>
+</div>
+<div class="dots" id="dots"></div>
+</div></section>
+
+<section class="contact ph" id="contact">
+<div class="bg"><img src="images/kumbakonam-temple.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+<div class="wrap">
+<h2 class="rv">உங்கள் விழாவிற்கு ஆர்டர் செய்யுங்கள்</h2>
+<svg class="orn" viewBox="0 0 150 14"><path d="M0 7H55M95 7H150" stroke="#f2c14e"/><path d="M75 1l6 6-6 6-6-6z" fill="#f2c14e"/></svg>
+<p class="sub">விவரங்களை நிரப்பினால் WhatsApp-ல் நேரடியாக எங்களுக்கு செய்தி செல்லும்.</p>
+<div class="cwrap">
+<div class="info rv">
+<p><small>அழைக்க</small><a href="tel:+919003600516">9003600516</a><br><a href="tel:+919597597229">9597597229</a></p>
+<p><small>முகவரி</small>212 1/c பாபா கார்டன், மூப்பக்கோவில், ஏரகரம் வல்லிநடப்பு, மேலக்காவேரி 612002, கும்பகோணம்</p>
+</div>
+<div class="enq rv">
+<h3>ஆர்டர் விவரங்கள்</h3>
+<label>பெயர்<input id="n" type="text" autocomplete="name"></label>
+<label>நிகழ்வு<select id="e"><option>திருமணம்</option><option>வரவேற்பு</option><option>வீட்டு விழா</option><option>பிறந்தநாள்</option><option>மற்றவை</option></select></label>
+<label>தேதி<input id="d" type="date"></label>
+<label>விருந்தினர் எண்ணிக்கை<input id="g" type="number" min="1" inputmode="numeric"></label>
+<button class="btn fill" id="send" type="button">WhatsApp-ல் அனுப்ப</button>
+</div>
+</div></div></section>
+
+<footer>© 2026 H.N கேட்டரிங், கும்பகோணம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.</footer>
+
+<div class="bar"><a href="tel:+919003600516">இப்போது அழைக்க</a><a href="https://wa.me/919003600516">WhatsApp</a></div>
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+(function(){
+var $=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
+var nav=$('#nav'),px=$$('[data-p]');
+function sc(){var y=window.scrollY;nav.classList.toggle('s',y>40);
+px.forEach(function(el){var r=el.parentNode.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)el.style.transform='translateY('+(-r.top*el.dataset.p)+'px)'})}
+sc();window.addEventListener('scroll',sc,{passive:true});
+
+var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+$$('.rv').forEach(function(e){io.observe(e)});
+
+/* counters */
+var co=new IntersectionObserver(function(es){es.forEach(function(x){if(!x.isIntersecting)return;co.unobserve(x.target);
+var el=x.target,n=+el.dataset.n,t=0;var iv=setInterval(function(){t+=n/50;if(t>=n){t=n;clearInterval(iv)}el.textContent=Math.round(t)},30)})},{threshold:.6});
+$$('[data-n]').forEach(function(e){co.observe(e)});
+
+/* gallery + lightbox */
+var imgs=['wedding-feast','biryani-closeup','catering-setup','chicken-fry','banana-leaf-meal','egg-masala','kitchen-cooking','sides-raita'];
+var g=$('#gal'),lb=$('#lb'),li=$('img',lb);
+imgs.forEach(function(n){var d=document.createElement('div');d.className='ph';var i=new Image();i.loading='lazy';i.alt='H.N கேட்டரிங் '+n;i.src='images/'+n+'.jpg';
+i.onerror=function(){d.remove()};d.appendChild(i);d.onclick=function(){li.src=i.src;lb.classList.add('on')};g.appendChild(d)});
+lb.onclick=function(){lb.classList.remove('on')};
+document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on')});
+
+/* reviews */
+var bq=$$('#rev blockquote'),dots=$('#dots'),k=0,tm;
+bq.forEach(function(_,i){var b=document.createElement('button');b.setAttribute('aria-label','கருத்து '+(i+1));b.onclick=function(){show(i)};dots.appendChild(b)});
+function show(i){k=i;bq.forEach(function(q,j){q.classList.toggle('on',j===i)});$$('button',dots).forEach(function(b,j){b.classList.toggle('on',j===i)});clearInterval(tm);tm=setInterval(function(){show((k+1)%bq.length)},5500)}
+show(0);
+
+$('#send').onclick=function(){
+var v=function(i){return $('#'+i).value||'-'};
+var t='வணக்கம் H.N கேட்டரிங்,\nபெயர்: '+v('n')+'\nநிகழ்வு: '+v('e')+'\nதேதி: '+v('d')+'\nவிருந்தினர்: '+v('g');
+window.open('https://wa.me/919003600516?text='+encodeURIComponent(t),'_blank')};
+})();
+</script>
+</body>
+</html>
